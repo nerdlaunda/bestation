@@ -1,4 +1,6 @@
 #!/bin/bash
+SOURCE=${BASH_SOURCE[0]}
+BASE_DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
-./pre-flight.sh
-./install-independents.sh
+$BASE_DIR/pre-flight.sh
+$BASE_DIR/install-independents.sh

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Inatalling zsh
-which zsh
+which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######         zsh         ######"
@@ -18,7 +18,7 @@ fi
 
 
 # Installing jq
-which zsh
+which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######          jq         ######"
@@ -30,7 +30,7 @@ else
 fi
 
 # top alternative htop
-which htop
+which htop > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######         htop        ######"
@@ -43,7 +43,7 @@ else
 fi
 
 # find alternative fdfind
-which fdfind
+which fdfind > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######       fd-find       ######"
@@ -58,7 +58,7 @@ else
 fi
 
 # Installing bat
-which batcat
+which batcat > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######         bat         ######"
@@ -68,5 +68,17 @@ if [[ $? -ne 0 ]]; then
     sleep 2
 else
     echo 'bat already installed!'
+    sleep 2
+fi
+
+# Installing git
+which git > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    echo "#################################"
+    echo "######         git         ######"
+    echo "#################################"
+    sudo apt install git -y
+else
+    echo 'Git already installed!'
     sleep 2
 fi
