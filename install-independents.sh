@@ -2,7 +2,7 @@
 
 # Inatalling zsh
 which zsh
-if [[ $? -ne 0]]; then
+if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######         zsh         ######"
     echo "#################################"
@@ -18,7 +18,7 @@ fi
 
 # Installing jq
 which zsh
-if [[ $? -ne 0]]; then
+if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######          jq         ######"
     echo "#################################"
@@ -30,7 +30,7 @@ fi
 
 # top alternative htop
 which htop
-if [[ $? -ne 0]]; then
+if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######         htop        ######"
     echo "#################################"
@@ -42,7 +42,7 @@ fi
 
 # find alternative fdfind
 which fdfind
-if [[ $? -ne 0]]; then
+if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######       fd-find       ######"
     echo "#################################"
@@ -56,7 +56,7 @@ fi
 
 # Installing bat
 which batcat
-if [[ $? -ne 0]]; then
+if [[ $? -ne 0 ]]; then
     echo "#################################"
     echo "######         bat         ######"
     echo "#################################"
