@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Inatalling zsh
-which zsh > /dev/null 2>&1
 echo "#################################"
 echo "######         zsh         ######"
 echo "#################################"
+which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo 'Installing zsh'
     sudo apt-get install zsh -y
@@ -18,10 +18,10 @@ fi
 
 
 # Installing jq
-which zsh > /dev/null 2>&1
 echo "#################################"
 echo "######          jq         ######"
 echo "#################################"
+which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     sudo apt install jq -y
 else
@@ -30,10 +30,10 @@ else
 fi
 
 # top alternative htop
-which htop > /dev/null 2>&1
 echo "#################################"
 echo "######         htop        ######"
 echo "#################################"
+which htop > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     sudo apt install htop
     sleep 2
@@ -43,10 +43,10 @@ else
 fi
 
 # find alternative fdfind
-which fdfind > /dev/null 2>&1
 echo "#################################"
 echo "######       fd-find       ######"
 echo "#################################"
+which fdfind > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     sudo apt install fd-find -y
     mkdir $HOME/.local/bin
@@ -58,10 +58,10 @@ else
 fi
 
 # Installing bat
-which batcat > /dev/null 2>&1
 echo "#################################"
 echo "######         bat         ######"
 echo "#################################"
+which batcat > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     sudo apt install bat -y
     ln -s /usr/bin/batcat ~/.local/bin/bat
