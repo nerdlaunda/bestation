@@ -16,10 +16,9 @@ sudo apt install htop
 # find alternative fdfind
 sudo apt install fd-find -y
 
-if [[ -f "$HOME/.local/bin/fd" ]]; then
-    rm $HOME/.local/bin/fd
-else 
-    mkdir $HOME/.local/bin
-    ln -s $(which fdfind) ~/.local/bin/fd
-fi
+mkdir $HOME/.local/bin
+ln -s $(which fdfind) ~/.local/bin/fd
 
+# cat alternative bat
+sudo apt install bat -y
+ln -s /usr/bin/batcat ~/.local/bin/bat
