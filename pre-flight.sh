@@ -14,10 +14,10 @@ fi
 sudo apt-get update
 
 # Installing git
-which git > /dev/null 2>&1
 echo "#################################"
 echo "######         git         ######"
 echo "#################################"
+which git > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo "Installing..."
     sudo apt install git -y
@@ -28,10 +28,10 @@ fi
 
 
 # Installing git
-which curl > /dev/null 2>&1
 echo "#################################"
 echo "######        curl         ######"
 echo "#################################"
+which curl > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo "Installing..."
     sudo apt install curl -y
