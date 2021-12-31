@@ -1,24 +1,68 @@
 #!/bin/bash
 
 # Inatalling zsh
-echo 'Installing zsh'
-sudo apt-get update
-sudo apt-get install zsh -y
-chsh -s $(which zsh)
-echo 'zsh Installed'
+which zsh
+if [[ $? -ne 0]]; then
+    echo "#################################"
+    echo "######         zsh         ######"
+    echo "#################################"
+    echo 'Installing zsh'
+    sudo apt-get install zsh -y
+    sudo chsh -s $(which zsh)
+    echo 'zsh Installed'
+else
+    echo 'Zsh already installed!'
+    sleep(2)
+fi
+
 
 # Installing jq
-sudo apt install jq -y
+which zsh
+if [[ $? -ne 0]]; then
+    echo "#################################"
+    echo "######          jq         ######"
+    echo "#################################"
+    sudo apt install jq -y
+else
+    echo 'jq already installed!'
+    sleep(2)
+fi
 
 # top alternative htop
-sudo apt install htop
+which htop
+if [[ $? -ne 0]]; then
+    echo "#################################"
+    echo "######         htop        ######"
+    echo "#################################"
+    sudo apt install htop
+else
+    echo 'htop already installed!'
+    sleep(2)
+fi
 
 # find alternative fdfind
-sudo apt install fd-find -y
+which fdfind
+if [[ $? -ne 0]]; then
+    echo "#################################"
+    echo "######       fd-find       ######"
+    echo "#################################"
+    sudo apt install fd-find -y
+    mkdir $HOME/.local/bin
+    ln -s $(which fdfind) ~/.local/bin/fd
+else
+    echo 'fdfind already installed!'
+    sleep(2)
+fi
 
-mkdir $HOME/.local/bin
-ln -s $(which fdfind) ~/.local/bin/fd
-
-# cat alternative bat
-sudo apt install bat -y
-ln -s /usr/bin/batcat ~/.local/bin/bat
+# Installing bat
+which batcat
+if [[ $? -ne 0]]; then
+    echo "#################################"
+    echo "######         bat         ######"
+    echo "#################################"
+    sudo apt install bat -y
+    ln -s /usr/bin/batcat ~/.local/bin/bat
+else
+    echo 'bat already installed!'
+    sleep(2)
+fi
