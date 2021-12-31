@@ -10,9 +10,10 @@ if [[ $? -ne 0 ]]; then
     sudo apt-get install zsh -y
     sudo chsh -s $(which zsh)
     echo 'zsh Installed'
+    sleep 2
 else
     echo 'Zsh already installed!'
-    sleep(2)
+    sleep 2
 fi
 
 
@@ -25,7 +26,7 @@ if [[ $? -ne 0 ]]; then
     sudo apt install jq -y
 else
     echo 'jq already installed!'
-    sleep(2)
+    sleep 2
 fi
 
 # top alternative htop
@@ -35,9 +36,10 @@ if [[ $? -ne 0 ]]; then
     echo "######         htop        ######"
     echo "#################################"
     sudo apt install htop
+    sleep 2
 else
     echo 'htop already installed!'
-    sleep(2)
+    sleep 2
 fi
 
 # find alternative fdfind
@@ -49,9 +51,10 @@ if [[ $? -ne 0 ]]; then
     sudo apt install fd-find -y
     mkdir $HOME/.local/bin
     ln -s $(which fdfind) ~/.local/bin/fd
+    sleep 2
 else
     echo 'fdfind already installed!'
-    sleep(2)
+    sleep 2
 fi
 
 # Installing bat
@@ -62,7 +65,8 @@ if [[ $? -ne 0 ]]; then
     echo "#################################"
     sudo apt install bat -y
     ln -s /usr/bin/batcat ~/.local/bin/bat
+    sleep 2
 else
     echo 'bat already installed!'
-    sleep(2)
+    sleep 2
 fi
