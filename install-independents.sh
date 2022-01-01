@@ -1,25 +1,104 @@
 #!/bin/bash
 
 # Inatalling zsh
-echo 'Installing zsh'
-sudo apt-get update
-sudo apt-get install zsh -y
-chsh -s $(which zsh)
-echo 'zsh Installed'
+echo "#################################"
+echo "######         zsh         ######"
+echo "#################################"
+which zsh > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    echo 'Installing zsh'
+    sudo apt-get install zsh -y
+    sudo chsh -s $(which zsh)
+    echo 'zsh Installed'
+    sleep 2
+else
+    echo 'Zsh already installed!'
+    sleep 2
+fi
+
 
 # Installing jq
-sudo apt install jq -y
+echo "#################################"
+echo "######          jq         ######"
+echo "#################################"
+which zsh > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    sudo apt install jq -y
+else
+    echo 'jq already installed!'
+    sleep 2
+fi
 
 # top alternative htop
-sudo apt install htop
+echo "#################################"
+echo "######         htop        ######"
+echo "#################################"
+which htop > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    sudo apt install htop
+    sleep 2
+else
+    echo 'htop already installed!'
+    sleep 2
+fi
 
 # find alternative fdfind
-sudo apt install fd-find -y
-
-if [[ -f "$HOME/.local/bin/fd" ]]; then
-    rm $HOME/.local/bin/fd
-else 
+echo "#################################"
+echo "######       fd-find       ######"
+echo "#################################"
+which fdfind > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    sudo apt install fd-find -y
     mkdir $HOME/.local/bin
     ln -s $(which fdfind) ~/.local/bin/fd
+    sleep 2
+else
+    echo 'fdfind already installed!'
+    sleep 2
+fi
+
+# Installing bat
+echo "#################################"
+echo "######         bat         ######"
+echo "#################################"
+which batcat > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    sudo apt install bat -y
+    ln -s /usr/bin/batcat ~/.local/bin/bat
+    sleep 2
+else
+    echo 'bat already installed!'
+    sleep 2
+fi
+
+# Installing peco
+echo "#################################"
+echo "######         peco        ######"
+echo "#################################"
+which peco > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    sudo apt install peco -y
+    sleep 2
+else
+    echo 'Peco already installed!'
+    sleep 2
+fi
+
+
+# Installing exa
+echo "#################################"
+echo "######         exa         ######"
+echo "#################################"
+which exa > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    mkdir /tmp/exa
+    wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip -O /tmp/exa/exa.zip
+    unzip /tmp/exa/exa.zip -d /tmp/exa
+    sudo cp /tmp/exa/bin/exa /usr/local/bin/exa 
+    rm -rf /tmp/exa
+    sleep 2
+else
+    echo 'Peco already installed!'
+    sleep 2
 fi
 
