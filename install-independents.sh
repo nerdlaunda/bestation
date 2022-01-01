@@ -71,3 +71,34 @@ else
     sleep 2
 fi
 
+# Installing peco
+echo "#################################"
+echo "######         peco        ######"
+echo "#################################"
+which peco > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    sudo apt install peco -y
+    sleep 2
+else
+    echo 'Peco already installed!'
+    sleep 2
+fi
+
+
+# Installing exa
+echo "#################################"
+echo "######         exa         ######"
+echo "#################################"
+which exa > /dev/null 2>&1
+if [[ $? -ne 0 ]]; then
+    mkdir /tmp/exa
+    wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip -O /tmp/exa/exa.zip
+    unzip /tmp/exa/exa.zip -d /tmp/exa
+    sudo cp /usr/local/bin
+    rm -rf /tmp/exa
+    sleep 2
+else
+    echo 'Peco already installed!'
+    sleep 2
+fi
+
