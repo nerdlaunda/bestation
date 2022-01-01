@@ -94,7 +94,7 @@ if [[ $? -ne 0 ]]; then
     mkdir /tmp/exa
     wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip -O /tmp/exa/exa.zip
     unzip /tmp/exa/exa.zip -d /tmp/exa
-    sudo cp /usr/local/bin
+    sudo cp /tmp/exa/bin/exa /usr/local/bin/exa 
     rm -rf /tmp/exa
     sleep 2
 else
