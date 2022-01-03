@@ -12,10 +12,8 @@ cp $BASE_DIR/files/bash_aliases $HOME/.bash_aliases
 echo "Adding path"
 echo "PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
 
-
 echo "#######################################"
 echo "               Rebooting               "
 echo "                                       "
 echo "#######################################"
 sudo reboot
-
