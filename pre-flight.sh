@@ -27,7 +27,7 @@ else
 fi
 
 
-# Installing git
+# Installing curl
 echo "#################################"
 echo "######        curl         ######"
 echo "#################################"
