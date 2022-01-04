@@ -1,14 +1,14 @@
 #!/bin/bash
 if [[ ! -d "$HOME/.local/bin" ]]; then
-    mkdir $HOME/.local/bin
+    sudo mkdir $HOME/.local/bin
 fi
 
 if [[ -f "$HOME/.local/bin/fd" ]]; then
-    rm $HOME/.local/bin/fd
+    sudo rm $HOME/.local/bin/fd
 fi 
 
 if [[ -f "$HOME/.local/bin/bat" ]]; then
-    rm $HOME/.local/bin/bat
+    sudo rm $HOME/.local/bin/bat
 fi 
 
 sudo apt-get update
