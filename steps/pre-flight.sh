@@ -23,7 +23,7 @@ if [[ $? -ne 0 ]]; then
     sudo apt-get -qq install git -y
 else
     echo 'Git already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 
@@ -37,7 +37,7 @@ if [[ $? -ne 0 ]]; then
     sudo apt-get -qq install curl -y
 else
     echo 'Curl already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 # Installing unzip
@@ -49,5 +49,5 @@ if [[ $? -ne 0 ]]; then
     sudo apt-get -qq install unzip -qq -y
 else
     echo 'Unzip already installed!'
-    sleep 2
+    sleep 0.5
 fi
