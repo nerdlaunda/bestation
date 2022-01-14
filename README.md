@@ -1,17 +1,19 @@
 # Bestation
 ## Index
-1. Operations
+1. [Operations](https://github.com/nerdlaunda/bestation#1-operations)
     - Installation
     - Uninstallation
-
+2. [What is it?](https://github.com/nerdlaunda/bestation#2-what-is-it)
+3. [What it does?](https://github.com/nerdlaunda/bestation#3-what-it-does)
+4. [Known Issues](https://github.com/nerdlaunda/bestation#4-known-issues)
 ## 1. Operations
 1. How to install?
-Visit release page.
-https://github.com/nerdlaunda/bestation/archive/refs/tags/v0.4.zip
-or clone the repository
+    - Visit [release page](https://github.com/nerdlaunda/bestation/releases)
+or clone the repository `git clone https://github.com/nerdlaunda/bestation/`
+    - Run `setup.sh`
 
-Run setup.sh
 2. How to Uninstall?
+    - Run `uninstall.sh`
 
 ## 2. What is it?
 This is a automation script to beautify your terminal for a better experience as well as productivity. 
@@ -64,7 +66,7 @@ It does the following.
         - Download the custom plugins
     - As finalizing
         - It copies files from ./files directory to respective destination
-    - NOTE: **Powerlevel10k can be configured using command `p10k configure` after script is successful. And fonts needs to be installed manually.**
+    - NOTE: **Powerlevel10k can be (not required) configured using command `p10k configure` after script is successful. And fonts needs to be installed manually.**
 
 ## 4. Known issues
 1. On uninstall, if the terminal(wsl) breaks with error 
