@@ -1,9 +1,18 @@
 # Bestation
+## Index
+1. Operations
+    - Installation
+    - Uninstallation
 
-## What is it?
+## 1. Operations
+1. How to install?
+-- TODO
+2. How to Uninstall?
+
+## 2. What is it?
 This is a automation script to beautify your terminal for a better experience as well as productivity. 
 
-## What it does?
+## 3. What it does?
 It does the following.
 1. Install these tools:
     - Git
@@ -52,3 +61,10 @@ It does the following.
     - As finalizing
         - It copies files from ./files directory to respective destination
     - NOTE: **Powerlevel10k can be configured using command `p10k configure` after script is successful. And fonts needs to be installed manually.**
+
+## 4. Known issues
+1. On uninstall, if the terminal(wsl) breaks with error 
+> [process exited with code 1] 
+    - Run in powershell `wsl.exe -e sudo apt-get install zsh`
+    - run `sudo chsh -s /bin/bash <username>`
+    - Restart terminal

@@ -7,13 +7,12 @@ echo "#################################"
 which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo 'Installing zsh'
-    sudo apt-get install zsh -y
-    sudo chsh -s $(which zsh)
+    sudo apt-get -qq install zsh -y
     echo 'zsh Installed'
-    sleep 2
+    sleep 0.5
 else
     echo 'Zsh already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 
@@ -23,10 +22,10 @@ echo "######          jq         ######"
 echo "#################################"
 which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install jq -y
+    sudo apt-get -qq install jq -y
 else
     echo 'jq already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 # top alternative htop
@@ -35,11 +34,11 @@ echo "######         htop        ######"
 echo "#################################"
 which htop > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install htop
-    sleep 2
+    sudo apt-get -qq install htop -y
+    sleep 0.5
 else
     echo 'htop already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 # find alternative fdfind
@@ -48,13 +47,12 @@ echo "######       fd-find       ######"
 echo "#################################"
 which fdfind > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install fd-find -y
-    mkdir $HOME/.local/bin
-    ln -s $(which fdfind) ~/.local/bin/fd
-    sleep 2
+    sudo apt-get -qq install fd-find -y
+    sudo ln -s $(which fdfind) ~/.local/bin/fd
+    sleep 0.5
 else
     echo 'fdfind already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 # Installing bat
@@ -63,12 +61,12 @@ echo "######         bat         ######"
 echo "#################################"
 which batcat > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install bat -y
-    ln -s /usr/bin/batcat ~/.local/bin/bat
-    sleep 2
+    sudo apt-get -qq install bat -y
+    sudo ln -s $(which batcat) ~/.local/bin/bat
+    sleep 0.5
 else
     echo 'bat already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 # Installing peco
@@ -77,11 +75,11 @@ echo "######         peco        ######"
 echo "#################################"
 which peco > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install peco -y
-    sleep 2
+    sudo apt-get -qq install peco -y
+    sleep 0.5
 else
     echo 'Peco already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
 
@@ -96,9 +94,9 @@ if [[ $? -ne 0 ]]; then
     unzip /tmp/exa/exa.zip -d /tmp/exa
     sudo cp /tmp/exa/bin/exa /usr/local/bin/exa 
     rm -rf /tmp/exa
-    sleep 2
+    sleep 0.5
 else
     echo 'Peco already installed!'
-    sleep 2
+    sleep 0.5
 fi
 
