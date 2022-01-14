@@ -7,8 +7,7 @@ echo "#################################"
 which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
     echo 'Installing zsh'
-    sudo apt-get install zsh -y
-    sudo chsh -s $(which zsh)
+    sudo apt-get -qq install zsh -y
     echo 'zsh Installed'
     sleep 2
 else
@@ -23,7 +22,7 @@ echo "######          jq         ######"
 echo "#################################"
 which zsh > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install jq -y
+    sudo apt-get -qq install jq -y
 else
     echo 'jq already installed!'
     sleep 2
@@ -35,7 +34,7 @@ echo "######         htop        ######"
 echo "#################################"
 which htop > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install htop
+    sudo apt-get -qq install htop -y
     sleep 2
 else
     echo 'htop already installed!'
@@ -48,9 +47,8 @@ echo "######       fd-find       ######"
 echo "#################################"
 which fdfind > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install fd-find -y
-    mkdir $HOME/.local/bin
-    ln -s $(which fdfind) ~/.local/bin/fd
+    sudo apt-get -qq install fd-find -y
+    sudo ln -s $(which fdfind) ~/.local/bin/fd
     sleep 2
 else
     echo 'fdfind already installed!'
@@ -63,8 +61,8 @@ echo "######         bat         ######"
 echo "#################################"
 which batcat > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install bat -y
-    ln -s /usr/bin/batcat ~/.local/bin/bat
+    sudo apt-get -qq install bat -y
+    sudo ln -s $(which batcat) ~/.local/bin/bat
     sleep 2
 else
     echo 'bat already installed!'
@@ -77,7 +75,7 @@ echo "######         peco        ######"
 echo "#################################"
 which peco > /dev/null 2>&1
 if [[ $? -ne 0 ]]; then
-    sudo apt install peco -y
+    sudo apt-get -qq install peco -y
     sleep 2
 else
     echo 'Peco already installed!'
