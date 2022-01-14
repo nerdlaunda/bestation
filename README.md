@@ -6,7 +6,11 @@
 
 ## 1. Operations
 1. How to install?
--- TODO
+Visit release page.
+https://github.com/nerdlaunda/bestation/archive/refs/tags/v0.4.zip
+or clone the repository
+
+Run setup.sh
 2. How to Uninstall?
 
 ## 2. What is it?
